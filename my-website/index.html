@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tonkatsu Archive — CSS Only Interactive Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    as="style"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="archive">
+    <!-- CSS Only 상태 제어용 라디오 입력 (키보드 방향키로 전환 가능) -->
+    <input type="radio" name="tonkatsu" id="dish-01" class="dish-radio" checked />
+    <input type="radio" name="tonkatsu" id="dish-02" class="dish-radio" />
+    <input type="radio" name="tonkatsu" id="dish-03" class="dish-radio" />
+    <input type="radio" name="tonkatsu" id="dish-04" class="dish-radio" />
+
+    <!-- 상단 에디토리얼 마스트헤드 -->
+    <header class="masthead">
+      <p class="masthead-title">TONKATSU ARCHIVE</p>
+      <p class="masthead-meta">COLLECTION NO. 01 — FOUR FORMS OF PORK CUTLET</p>
+      <p class="masthead-note">SEOUL · TOKYO</p>
+    </header>
+
+    <!-- 메인 3단 비대칭 인터랙티브 스테이지 -->
+    <main class="stage">
+      <!-- 왼쪽: Navigation -->
+      <nav class="nav-column" aria-label="돈가스 종류 선택">
+        <p class="section-kicker">MENU INDEX</p>
+
+        <ul class="dish-nav">
+          <li class="dish-nav-item">
+            <label for="dish-01" class="dish-label">
+              <span class="dish-num">01</span>
+              <span class="dish-titles">
+                <span class="dish-en">Gyeongyang-sik</span>
+                <span class="dish-ko">경양식 돈가스</span>
+              </span>
+            </label>
+          </li>
+
+          <li class="dish-nav-item">
+            <label for="dish-02" class="dish-label">
+              <span class="dish-num">02</span>
+              <span class="dish-titles">
+                <span class="dish-en">Japanese Tonkatsu</span>
+                <span class="dish-ko">일본식 돈카츠</span>
+              </span>
+            </label>
+          </li>
+
+          <li class="dish-nav-item">
+            <label for="dish-03" class="dish-label">
+              <span class="dish-num">03</span>
+              <span class="dish-titles">
+                <span class="dish-en">Katsu Sando</span>
+                <span class="dish-ko">카츠산도</span>
+              </span>
+            </label>
+          </li>
+
+          <li class="dish-nav-item">
+            <label for="dish-04" class="dish-label">
+              <span class="dish-num">04</span>
+              <span class="dish-titles">
+                <span class="dish-en">Katsudon</span>
+                <span class="dish-ko">가츠동</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 중앙: Visual
+           로컬 이미지로 교체 시 아래 img src를 ./images/dish-01.jpg 등으로 변경하세요. -->
+      <section class="visual-column" aria-label="선택된 돈가스 이미지">
+        <div class="visual-stage">
+          <figure class="visual-item visual-item--01">
+            <div class="visual-media">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Dongaseu_4.jpg?width=1200"
+                alt="넓고 얇게 튀겨 데미글라스 소스를 넉넉히 부은 경양식 돈가스"
+              />
+            </div>
+            <figcaption class="visual-caption">
+              <span class="caption-index">PLATE 01</span>
+              <span class="caption-text">Broad flat cutlet glazed with warm demi-glace</span>
+            </figcaption>
+          </figure>
+
+          <figure class="visual-item visual-item--02">
+            <div class="visual-media">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Tonkatsu_001.jpg?width=1200"
+                alt="두툼한 등심을 바삭한 생빵가루로 튀겨 썰어낸 일본식 돈카츠"
+              />
+            </div>
+            <figcaption class="visual-caption">
+              <span class="caption-index">PLATE 02</span>
+              <span class="caption-text">Thick-cut loin fried in coarse panko breadcrumbs</span>
+            </figcaption>
+          </figure>
+
+          <figure class="visual-item visual-item--03">
+            <div class="visual-media">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/KatsuSando6515.jpg?width=1200"
+                alt="부드러운 식빵 사이에 두툼한 돈카츠를 끼워 정갈하게 자른 카츠산도"
+              />
+            </div>
+            <figcaption class="visual-caption">
+              <span class="caption-index">PLATE 03</span>
+              <span class="caption-text">Crisp pork cutlet layered between soft milk bread</span>
+            </figcaption>
+          </figure>
+
+          <figure class="visual-item visual-item--04">
+            <div class="visual-media">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Katsudon_001.jpg?width=1200"
+                alt="달콤짭짤한 쯔유와 반숙 달걀로 돈카츠를 끓여 밥 위에 올린 가츠동"
+              />
+            </div>
+            <figcaption class="visual-caption">
+              <span class="caption-index">PLATE 04</span>
+              <span class="caption-text">Simmered cutlet folded with soft egg over steamed rice</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 오른쪽: Information -->
+      <section class="info-column" aria-label="선택된 돈가스 설명">
+        <div class="info-stack">
+          <!-- 01 경양식 돈가스 -->
+          <article class="info-item info-item--01">
+            <p class="section-kicker">ARCHIVE ENTRY — 01</p>
+            <h1 class="info-name-ko">경양식 돈가스</h1>
+            <p class="info-name-en">Gyeongyang-sik Donkatsu</p>
+            <p class="info-summary">
+              한국 근현대 외식 문화의 상징으로 자리 잡은 클래식 양식 스타일의 돈가스입니다.
+              크림수프와 마카로니, 양배추 샐러드가 함께 오르는 넉넉한 한 접시의 미학을 담고 있습니다.
+            </p>
+            <dl class="info-details">
+              <div class="detail-row">
+                <dt>소스의 특징</dt>
+                <dd>
+                  밀가루와 버터를 볶은 루(Roux)에 케첩, 우스터소스, 육수를 더해 은근히 끓여낸
+                  부드럽고 달콤한 데미글라스 계열 소스를 튀김 위에 넉넉히 부어 제공합니다.
+                </dd>
+              </div>
+              <div class="detail-row">
+                <dt>조리 및 형태적 특징</dt>
+                <dd>
+                  돼지고기 등심을 망치로 얇고 넓게 두드려 편 뒤 고운 빵가루를 입혀 바삭하게 튀겨내며,
+                  나이프와 포크로 직접 썰어 먹는 넓은 판형 실루엣이 특징입니다.
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- 02 일본식 돈카츠 -->
+          <article class="info-item info-item--02">
+            <p class="section-kicker">ARCHIVE ENTRY — 02</p>
+            <h2 class="info-name-ko">일본식 돈카츠</h2>
+            <p class="info-name-en">Japanese Tonkatsu</p>
+            <p class="info-summary">
+              두툼한 돼지고기의 육즙과 결을 온전히 살려내는 정통 일본식 카츠입니다.
+              채 썬 양배추와 밥, 미소시루가 정갈한 정식 구성으로 어우러집니다.
+            </p>
+            <dl class="info-details">
+              <div class="detail-row">
+                <dt>소스의 특징</dt>
+                <dd>
+                  과일과 채소, 향신료를 숙성해 점도와 산미를 살린 진한 돈카츠 소스를 곁들이며,
+                  소금이나 연겨자, 간 참깨를 취향에 맞게 찍어 먹습니다.
+                </dd>
+              </div>
+              <div class="detail-row">
+                <dt>조리 및 형태적 특징</dt>
+                <dd>
+                  등심(로스)이나 안심(히레)을 2cm 안팎으로 두껍게 썰어 거친 생빵가루를 입혀 튀긴 뒤,
+                  젓가락으로 집기 좋게 한입 크기로 썰어 기름망 위에 올립니다.
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- 03 카츠산도 -->
+          <article class="info-item info-item--03">
+            <p class="section-kicker">ARCHIVE ENTRY — 03</p>
+            <h2 class="info-name-ko">카츠산도</h2>
+            <p class="info-name-en">Katsu Sando</p>
+            <p class="info-summary">
+              도쿄의 오래된 돈카츠 전문점에서 시작된 샌드위치 형태의 변주입니다.
+              손에 쥐고 가볍게 즐기면서도 카츠 본연의 밀도 높은 식감을 그대로 전합니다.
+            </p>
+            <dl class="info-details">
+              <div class="detail-row">
+                <dt>소스의 특징</dt>
+                <dd>
+                  빵에 스며들어도 눅눅해지지 않도록 농도가 짙은 특제 돈카츠 소스를 카츠 표면에
+                  고르게 입히고, 알싸한 머스터드 버터로 맛의 균형을 잡습니다.
+                </dd>
+              </div>
+              <div class="detail-row">
+                <dt>조리 및 형태적 특징</dt>
+                <dd>
+                  테두리를 정리한 폭신한 우유 식빵 사이에 두툼한 카츠를 끼워 눌러낸 뒤,
+                  선명한 단면이 드러나도록 직사각형으로 정갈하게 잘라냅니다.
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- 04 가츠동 -->
+          <article class="info-item info-item--04">
+            <p class="section-kicker">ARCHIVE ENTRY — 04</p>
+            <h2 class="info-name-ko">가츠동</h2>
+            <p class="info-name-en">Katsudon</p>
+            <p class="info-summary">
+              갓 튀긴 돈카츠를 다시 한 번 육수와 달걀로 감싸 따뜻한 밥 위에 올린 덮밥입니다.
+              바삭함과 촉촉함이 공존하는 깊은 감칠맛이 매력적인 한 그릇입니다.
+            </p>
+            <dl class="info-details">
+              <div class="detail-row">
+                <dt>소스의 특징</dt>
+                <dd>
+                  가쓰오부시 육수에 간장, 미림, 설탕을 배합한 달콤짭짤한 돈부리 전용 쯔유가
+                  튀김옷과 밥알 사이로 부드럽게 배어듭니다.
+                </dd>
+              </div>
+              <div class="detail-row">
+                <dt>조리 및 형태적 특징</dt>
+                <dd>
+                  전용 냄비(오야코나베)에 채 썬 양파와 썰어둔 돈카츠를 끓인 뒤 풀어둔 달걀을
+                  반숙 상태로 두 번에 나누어 익혀 흰쌀밥 위에 그대로 얹어 완성합니다.
+                </dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- 하단 절제된 아카이브 풋노트 -->
+    <footer class="colophon">
+      <p>SELECT AN ITEM OR USE ARROW KEYS TO EXPLORE</p>
+      <p>PURE HTML &amp; CSS INTERACTION</p>
+    </footer>
+  </div>
+</body>
+</html>
